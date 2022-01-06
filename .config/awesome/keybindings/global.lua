@@ -3,7 +3,6 @@ local awful = require("awful");
 local hotkeys_popup = require("awful.hotkeys_popup")
 local volume_widget = require("widgets.panel.volume")
 local brightness_widget = require("widgets.panel.brightness")
-local naughty = require("naughty")
 local cfg = require("config")
 require("awful.autofocus")
 
@@ -257,7 +256,6 @@ local globalkeys = gears.table.join(
         {modkey }, "i",
         function()
             awful.util.spawn(cfg.apps.menu)
-            naughty.notify({title = cfg.apps.menu })
         end,
         {description = "Application launcher", group = "launcher"}
     ),
