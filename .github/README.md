@@ -9,7 +9,7 @@
         <img src="https://img.shields.io/github/languages/count/itsnexn/dotfiles?style=flat-square"/>
         <img src="https://img.shields.io/github/directory-file-count/itsnexn/dotfiles?style=flat-square"/>
     </div>
-<p>There is no place like <strong>$HOME<strong></p>
+<p>There is no place like <strong>$HOME</strong></p>
 </div>
 
 ---
