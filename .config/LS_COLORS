@@ -1,0 +1,77 @@
+# [target]=[Style];[FG];[BG]
+# You can also do something like this:
+# *.png=[Style];[FG];[BG]
+
+# TARGETS:
+#    [bd]="block device"
+#    [ca]="file with capability"
+#    [cd]="character device"
+#    [di]="directory"
+#    [do]="door"
+#    [ex]="executable file"
+#    [fi]="regular file"
+#    [ln]="symbolic link"
+#    [mh]="multi-hardlink"
+#    [mi]="missing file"
+#    [no]="normal non-filename text"
+#    [or]="orphan symlink"
+#    [ow]="other-writable directory"
+#    [pi]="named pipe, AKA FIFO"
+#    [rs]="reset to no color"
+#    [sg]="set-group-ID"
+#    [so]="socket"
+#    [st]="sticky directory"
+#    [su]="set-user-ID"
+#    [tw]="sticky and other-writable directory"
+
+# TEXT_STYLE indicates the text style:
+# 00 = none
+# 01 = bold
+# 04 = underscore
+# 05 = blink
+# 07 = reverse,
+# 08 = concealed
+# FOREGROUND_COLOR indicates the foreground color:
+# 30 = black
+# 31 = red
+# 32 = green
+# 33 = yellow
+# 34 = blue,
+# 35 = magenta
+# 36 = cyan
+# 37 = white
+# BACKGROUND_COLOR indicates the background colors:
+# 40 = black
+# 41 = red
+# 42 = green
+# 43 = yellow
+# 44 = blue,
+# 45 = magenta
+# 46 = cyan
+# 47 = white
+
+export LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=32;43:ca=30;41:tw=04;33:ow=04;33;40:st=37;44:ex=01;32"
+
+# Tput colors in https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit
+# termcap terminfo  
+# ks      smkx      make the keypad send commands
+# ke      rmkx      make the keypad send digits
+# vb      flash     emit visual bell
+# mb      blink     start blink
+# md      bold      start bold
+# me      sgr0      turn off bold, blink and underline
+# so      smso      start standout (reverse video)
+# se      rmso      stop standout
+# us      smul      start underline
+# ue      rmul      stop underline
+
+# bold & blinking mode
+export LESS_TERMCAP_mb="${fg_bold[red]}"
+export LESS_TERMCAP_md="${fg_bold[red]}"
+export LESS_TERMCAP_me="${reset_color}"
+# standout mode
+export LESS_TERMCAP_so="${fg_bold[black]}${bg[blue]}"
+export LESS_TERMCAP_se="${reset_color}"
+# underlining
+export LESS_TERMCAP_us="${fg_bold[green]}"
+export LESS_TERMCAP_ue="${reset_color}"

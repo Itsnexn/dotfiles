@@ -1,0 +1,54 @@
+format="""$python$username[@](green bold)$hostname:$directory$cmd_duration$character"""
+right_format="""$git_branch $git_status"""
+
+[character]
+# Default
+success_symbol = "[\\$](gray)" 
+error_symbol = "[\\$](bold red)"
+vicmd_symbol    = "[\\$](bold gray)"
+
+# Vim Mode
+# success_symbol  = " \\[[INSERT](bold green)\\][\\$](bold gray)" 
+# vicmd_symbol    = " \\[[NORMAL](bold blue)\\][\\$](bold gray)"
+# error_symbol    = " \\[[INSERT](bold red)\\][\\$](bold red)"
+
+[username]
+style_user = "green bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format =  "[$hostname](bold green)"
+disabled = false
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style)"
+style = "bold green"
+read_only = "  "
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+format = "on [$branch $symbol](bold green)"
+symbol = ""
+
+[git_status]
+format ='($modified$untracked$deleted)'
+untracked = "[](yellow)[$count](bold yellow) "
+modified = "[](purple)[$count](bold purple) "
+deleted = "[](red)[$count](bold red) "
+disabled = false
+
+
+[python]
+symbol = " "
+format='[\($symbol](yellow)[$virtualenv](bold blue)[\)](yellow)'
+detect_extensions = []
+disabled = false
+
+[cmd_duration]
+min_time = 2_000
+format = "  took [$duration](bold yellow) "

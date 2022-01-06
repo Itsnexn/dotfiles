@@ -1,0 +1,73 @@
+#!/usr/bin/env sh
+# -== Environment variables ==-
+
+source $HOME/.config/LS_COLORS
+
+# Terminal
+export TERMINAL="kitty"
+export HISTORY_IGNORE="(clear|ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+
+# =======================================
+# => Default Apps
+# =======================================
+# I <3 VIM
+export EDITOR="nvim"
+# export EDITOR="vim"
+export VISUAL="nvim"
+export BROWSER="chromium"
+
+export MANPAGER="less"
+# Use bat
+if ! command -v bat &> /dev/null
+then
+    export PAGER="less"
+else
+    export PAGER="bat"
+fi
+
+export PAGER="less"
+
+# =======================================
+# => Clean up 
+# =======================================
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.local/cache"
+
+export ZDOTDIR="$HOME/.config/zsh"
+
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+
+export GOPATH="$XDG_DATA_HOME/go"
+
+export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+export LESSHISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/lesshistory"
+
+export WEECHAT_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/weechat"
+export MBSYNCRC="${XDG_CONFIG_HOME:-$HOME/.config}/mbsync/config"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export GTK2_RC_FILES="${XDG_CONFIG_HOME/gtk-2.0:-$HOME/.config/gtk-2.0}/gtkrc-2.0"
+export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
+
+# =======================================
+# => Other app Settings  
+# =======================================
+export FZF_DEFAULT_OPTS="\
+    --reverse \
+    --height 100% \
+    --border rounded \
+    --color=fg:#a9b1d6,bg:#1a1b26,hl:#9ece6a \
+    --color=fg+:#a9b1d6,bg+:#1a1b26,hl+:#9ece6a \
+    --color=info:#9ece6a,prompt:#f7768e,pointer:#af5fff \
+    --color=marker:#f7768e,spinner:#9ece6a,header:#e0af68"
+
+export LESS="--mouse"
+export JAVA_FONTS=/usr/share/fonts/TTF
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+
+# =======================================
+# => PATH 
+# =======================================
+export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/scripts"
+

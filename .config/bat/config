@@ -1,0 +1,8 @@
+# set theme
+# Use this command to get new theme:
+#   bat cache --build
+--tabs=4
+--theme="tokyonight"
+
+# enable italic
+--italic-text=always

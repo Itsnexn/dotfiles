@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="240"
+   height="240"
+   viewBox="0 0 240 240"
+   fill="none"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="tilebottom.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="2.625"
+     inkscape:cx="119.80952"
+     inkscape:cy="120"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     inkscape:window-x="0"
+     inkscape:window-y="14"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16">
+    <sodipodi:guide
+       position="20,220"
+       orientation="1,0"
+       id="guide581" />
+    <sodipodi:guide
+       position="70.857143,220.19048"
+       orientation="0,-1"
+       id="guide583" />
+    <sodipodi:guide
+       position="219.80952,184"
+       orientation="1,0"
+       id="guide585" />
+    <sodipodi:guide
+       position="153,20"
+       orientation="0,-1"
+       id="guide587" />
+  </sodipodi:namedview>
+  <path
+     d="M 219.92927,82.809405 219.80916,19.80952 19.80952,20.190844 19.929637,83.190729 Z"
+     fill="#ffffff"
+     id="path2" />
+  <path
+     d="m 220.06274,152.80928 -0.0991,-51.99991 -53.9999,0.10296 0.0991,51.99991 z"
+     fill="#ffffff"
+     id="path4" />
+  <path
+     d="m 147.06287,152.94846 -0.0991,-51.9999 -53.999907,0.10295 0.09914,51.99991 z"
+     fill="#ffffff"
+     id="path6" />
+  <path
+     d="m 74.063002,153.08764 -0.09914,-51.9999 -53.999902,0.10296 0.09914,51.9999 z"
+     fill="#ffffff"
+     id="path8" />
+  <path
+     d="m 220.19048,219.80916 -0.0934,-48.99991 -53.99991,0.10295 0.0934,48.99991 z"
+     fill="#ffffff"
+     id="path10" />
+  <path
+     d="m 147.19061,219.94834 -0.0934,-48.99991 -53.999903,0.10296 0.09342,48.99991 z"
+     fill="#ffffff"
+     id="path12" />
+  <path
+     d="m 74.190745,220.08752 -0.09342,-48.99991 -53.999902,0.10296 0.09342,48.99991 z"
+     fill="#ffffff"
+     id="path14" />
+</svg>

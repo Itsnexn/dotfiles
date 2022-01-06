@@ -1,0 +1,63 @@
+#!/bin/env sh
+# 0xNexn Bash/Zsh Aliases
+
+[ -d /mnt/files/NOTES ] && alias nv="vim /mnt/files/NOTES"
+
+# Utils
+alias vim="nvim"
+alias ed="ed -p '➡ '"
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias python="python2.7"
+alias py="python3"
+alias s="sudo systemctl"
+alias srN="sudo systemctl restart NetworkManager"
+alias rss="newsboat"
+alias music="ncmpcpp"
+alias r="ranger"
+alias mail="neomutt"
+alias irssi="irssi --home "$XDG_CONFIG_HOME/irssi""
+alias tp="trash"
+alias tl="trash-list"
+alias tr="trash-restore"
+alias t="tldr"
+alias clashgui="$HOME/.local/bin/clash/cfw"
+alias tb="nc termbin.com 9999"
+
+# Changing "ls" to "exa"
+if ! [ -x "$(command -v exa)" ]; then
+    alias ls="exa --color=always --group-directories-first"
+fi
+
+# Clipboard
+# npm install -g clipboard-cli
+alias cb="clipboard"
+
+# h4x0r m4n Stuff :D
+alias up="python3 -m http.server"
+alias upphp="php --server=127.0.0.1:80"
+
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+
+# bare git repo alias for dotfiles
+alias cfg="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias lcfg="/usr/bin/lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias cfgs="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME status"
+alias cfgc="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME commit"
+alias cfga="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME add"
+
+# the terminal rickroll
+alias rr="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
+
+# typo
+alias "cd.."="cd .."
+alias "cd."="cd .."
+alias claer="clear"
+
+alias arduino-cli="arduino-cli --config-file $XDG_CONFIG_HOME/arduino15/arduino-cli.yaml"
+alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
