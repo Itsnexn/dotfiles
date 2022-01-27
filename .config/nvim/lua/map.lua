@@ -35,8 +35,8 @@ bind("n", "<S-x>",   ":Bdelete this<CR>", default_opts)
 bind("v", "<s-j>", ':m ">+1<CR>gv=gv', { noremap = true })
 bind("v", "<s-k>", ':m "<-1<CR>gv=gv', { noremap = true })
 -- Insert mode
-bind("i", "<c-j>", "<esc>:m .+1<CR>==i", { noremap = true })
-bind("i", "<c-k>", "<esc>:m .-2<CR>==i", { noremap = true })
+bind("i", "<m-j>", "<esc>:m .+1<CR>==i", { noremap = true })
+bind("i", "<m-k>", "<esc>:m .-2<CR>==i", { noremap = true })
 -- }}}
 
 -- {{{ Dashboard

@@ -34,7 +34,7 @@
     - Font awesome
 - Terminal: Kitty
 - Icon theme: Arc
-- Browser: Chromium
+- Browser: Brave (why not firefox!? cuz its slow)
 - WM: AwesomeWM
 
 <h2 id="dotfile-explain">What Are Dotfiles?</h2>

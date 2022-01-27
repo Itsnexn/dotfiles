@@ -14,7 +14,7 @@ export HISTORY_IGNORE="(clear|ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export EDITOR="nvim"
 # export EDITOR="vim"
 export VISUAL="nvim"
-export BROWSER="chromium"
+export BROWSER="brave"
 
 export MANPAGER="less"
 # Use bat
@@ -54,15 +54,14 @@ export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
 # => Other app Settings  
 # =======================================
 export FZF_DEFAULT_OPTS="\
+    --height=20% \
     --reverse \
-    --height 100% \
-    --border rounded \
     --color=fg:#a9b1d6,bg:#1a1b26,hl:#9ece6a \
     --color=fg+:#a9b1d6,bg+:#1a1b26,hl+:#9ece6a \
     --color=info:#9ece6a,prompt:#f7768e,pointer:#af5fff \
     --color=marker:#f7768e,spinner:#9ece6a,header:#e0af68"
 
-export LESS="--mouse"
+export LESS="--mouse --use-color -r"
 export JAVA_FONTS=/usr/share/fonts/TTF
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 

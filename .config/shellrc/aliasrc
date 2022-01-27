@@ -26,7 +26,7 @@ alias clashgui="$HOME/.local/bin/clash/cfw"
 alias tb="nc termbin.com 9999"
 
 # Changing "ls" to "exa"
-if ! [ -x "$(command -v exa)" ]; then
+if [ -n "$(command -v exa)" ]; then
     alias ls="exa --color=always --group-directories-first"
 fi
 
@@ -45,11 +45,11 @@ alias mv="mv -i"
 alias rm="rm -i"
 
 # bare git repo alias for dotfiles
-alias cfg="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias lcfg="/usr/bin/lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias cfgs="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME status"
-alias cfgc="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME commit"
-alias cfga="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME add"
+alias cg="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias lcg="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias cgs="git --git-dir=$HOME/.dotfiles --work-tree=$HOME status"
+alias cgd="git --git-dir=$HOME/.dotfiles --work-tree=$HOME status -s | awk '{ print \$2}' | fzf | xargs -I {} git --git-dir=$HOME/.dotfiles --work-tree=$HOME diff {}"
+alias cga="git --git-dir=$HOME/.dotfiles --work-tree=$HOME add"
 
 # the terminal rickroll
 alias rr="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
