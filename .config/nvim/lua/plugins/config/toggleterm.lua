@@ -24,13 +24,13 @@ toggleterm.setup{
 
 -- lazygit
 _G._Lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "horizontal"})
-function _Lazygit_toggle()
+function _G._Lazygit_toggle()
   _Lazygit:toggle()
 end
 
 -- Python
-_G._Python = Terminal:new({ cmd = "python", hidden = true })
-function _Python_toggle()
+_G._Python = Terminal:new({ cmd = "bpython", hidden = true })
+function _G._Python_toggle()
   _Python:toggle()
 end
 

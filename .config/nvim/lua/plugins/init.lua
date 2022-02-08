@@ -29,7 +29,7 @@ return require("packer").startup(function(use)
 	use {"onsails/lspkind-nvim"}
     use { "L3MON4D3/LuaSnip" }
     use { "tami5/lspsaga.nvim" }
-    use "folke/trouble.nvim"
+    use {"folke/trouble.nvim"}
 -- }}
 
 -- {{ CMP
@@ -82,7 +82,6 @@ return require("packer").startup(function(use)
       -- tag = "release" -- To use the latest release
     }
 
-    use {'mattn/emmet-vim'}
     use {
         "glacambre/firenvim",
         run = function() vim.fn["firenvim#install"](0) end

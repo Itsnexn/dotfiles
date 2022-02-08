@@ -47,21 +47,21 @@ bind('n', '<leader>d',  ':Dashboard<CR>', default_opts)
 bind("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", default_opts)
 bind("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", default_opts)
 bind("n", "gr", "<cmd>Lspsaga rename<cr>", default_opts)
-bind("n", "gx", "<cmd>Lspsaga code_action<cr>", default_opts)
-bind("x", "gx", ":<c-u>Lspsaga range_code_action<cr>", default_opts)
+bind("n", "gc", "<cmd>Lspsaga code_action<cr>", default_opts)
+bind("x", "gc", ":<c-u>Lspsaga range_code_action<cr>", default_opts)
 bind("n", "K",  "<cmd>Lspsaga hover_doc<cr>", default_opts)
-bind("n", "<leader>o", "<cmd>Lspsaga show_line_diagnostics<cr>", default_opts)
+bind("n", "gl", "<cmd>Lspsaga show_line_diagnostics<cr>", default_opts)
 bind("n", "<leader>>", "<cmd>Lspsaga diagnostic_jump_next<cr>", default_opts)
-bind("n", "<leader<<", "<cmd>Lspsaga diagnostic_jump_prev<cr>", default_opts)
+bind("n", "<leader><", "<cmd>Lspsaga diagnostic_jump_prev<cr>", default_opts)
 bind("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>", {})
 bind("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>", {})
-bind("n", "<leader>gt", "<cmd>Trouble lsp_document_diagnostics<CR>", {})
+bind("n", "gt", "<cmd>Trouble lsp_document_diagnostics<CR>", {})
 -- }}}
 
 -- {{{ Term
 bind('n', '', ':ToggleTerm<CR>', default_opts)
-bind("n", "<leader>tg", "<cmd>lua _Lazygit()<CR>", default_opts)
-bind("n", "<leader>tp", "<cmd>lua _Python()<CR>", default_opts)
+bind("n", "<leader>tg", "<cmd>lua _Lazygit_toggle()<CR>", default_opts)
+bind("n", "<leader>tp", "<cmd>lua _Python_toggle()<CR>", default_opts)
 bind("n", "<leader>r", "<cmd>lua _Run()<CR>", default_opts)
 -- }}}
 

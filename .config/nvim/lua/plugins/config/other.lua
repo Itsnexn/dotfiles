@@ -30,6 +30,4 @@ require"surround".setup {
   },
   prefix = "s"
 }
-
-g.user_emmet_leader_key='<C-space>'
 -- }}}

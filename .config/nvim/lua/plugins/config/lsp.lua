@@ -15,9 +15,11 @@ local lsp_servers = {
 	"yamlls",               -- Yaml
     "sumneko_lua",          -- Lua
     "tsserver",             -- JS and TS
+    "eslint",               -- JS and TS
     "vimls",                -- Vim
     "cssls",                -- Css
     "html",                 -- Html
+    "emmet-ls",             --  HTML
     "pylsp",                -- Python
 }
 -- }}}
@@ -88,6 +90,7 @@ lspconfig.ccls.setup {
   }
 }
 
+
 -- {{{ On ready func
 lsp_installer.on_server_ready( function(server)
 	local default_opts = {
@@ -98,6 +101,9 @@ lsp_installer.on_server_ready( function(server)
             ["textDocument/signatureHelp"] =
                 vim.lsp.with(vim.lsp.handlers.signature_help, {border = "single"}),
         },
+      root_dir = function(_)
+        return vim.loop.cwd()
+      end;
 
 	}
 

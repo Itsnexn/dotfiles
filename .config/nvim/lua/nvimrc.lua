@@ -15,15 +15,10 @@ o.completeopt = "menu,menuone,noselect" -- required by cmp
 
 vim.cmd([[
 set path+=**/*
-autocmd Filetype html
-    \| setlocal
-    \| ts=2
-    \| sw=2
 
-autocmd Filetype makefile
-    \| setlocal
-    \| ts=8
-    \| sw=8
+autocmd Filetype html setlocal ts=2 sw=2 sts=4
+autocmd Filetype css setlocal ts=2 sw=2 sts=4
+autocmd Filetype makefile setlocal ts=8 sw=8 sts=4
 ]])
 
 -- Theme {{{
