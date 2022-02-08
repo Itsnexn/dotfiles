@@ -18,14 +18,11 @@ export BROWSER="brave"
 
 export MANPAGER="less"
 # Use bat
-if ! command -v bat &> /dev/null
-then
+if ![ -x "$(command -v bat)" ]; then
     export PAGER="less"
 else
     export PAGER="bat"
 fi
-
-export PAGER="less"
 
 # =======================================
 # => Clean up 
@@ -39,6 +36,9 @@ export ZDOTDIR="$HOME/.config/zsh"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 
 export GOPATH="$XDG_DATA_HOME/go"
+
+# I hate __pycache__
+export PYTHONDONTWRITEBYTECODE=1
 
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export LESSHISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/lesshistory"
