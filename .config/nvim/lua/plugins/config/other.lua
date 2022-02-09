@@ -2,6 +2,7 @@
 --              -== Other Cfg ==-
 -- =============================================
 local g = vim.g
+local colors = require("tokyonight.colors").setup({})
 
 
 -- {{{ Vim Commentary
@@ -30,4 +31,11 @@ require"surround".setup {
   },
   prefix = "s"
 }
+-- }}}
+
+-- {{{ Vim better whitespace
+vim.cmd("highlight ExtraWhitespace guibg="..colors.red)
+vim.g.better_whitespace_enabled = true
+vim.g.strip_whitespace_on_save = true
+vim.g.better_whitespace_operator = '<leader><leader>'
 -- }}}

@@ -18,14 +18,14 @@ export BROWSER="brave"
 
 export MANPAGER="less"
 # Use bat
-if ! [ -x "$(command -v bat)" ]; then
+if [ -n "$(command -v bat)" ]; then
     export PAGER="less"
 else
     export PAGER="bat"
 fi
 
 # =======================================
-# => Clean up 
+# => Clean up
 # =======================================
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -51,7 +51,7 @@ export GTK2_RC_FILES="${XDG_CONFIG_HOME/gtk-2.0:-$HOME/.config/gtk-2.0}/gtkrc-2.
 export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
 
 # =======================================
-# => Other app Settings  
+# => Other app Settings
 # =======================================
 export FZF_DEFAULT_OPTS="\
     --height=20% \
@@ -66,7 +66,7 @@ export JAVA_FONTS=/usr/share/fonts/TTF
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 
 # =======================================
-# => PATH 
+# => PATH
 # =======================================
-export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/scripts"
+export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/scripts:$HOME/.cargo/bin"
 

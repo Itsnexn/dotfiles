@@ -19,6 +19,8 @@ set path+=**/*
 autocmd Filetype html setlocal ts=2 sw=2 sts=4
 autocmd Filetype css setlocal ts=2 sw=2 sts=4
 autocmd Filetype makefile setlocal ts=8 sw=8 sts=4
+
+command Format :lua vim.lsp.buf.formatting_sync()
 ]])
 
 -- Theme {{{

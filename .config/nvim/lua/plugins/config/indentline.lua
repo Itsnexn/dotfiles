@@ -7,9 +7,9 @@ local g = vim.g
 local o = vim.opt
 
 o.list = true
-o.listchars:append("space:⋅")
+-- o.listchars:append("space:⋅")
 
-g.indent_blankline_space_char_blankline = '⋅'
+g.indent_blankline_space_char_blankline = ' '
 g.indent_blankline_filetype_exclude = {
     "NvimTree",
     "help",

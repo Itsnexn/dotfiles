@@ -1,6 +1,7 @@
 -- =============================================
 --          -== Packer Startup ==-
--- ============================================= local execute = vim.api.nvim_command
+-- =============================================
+local execute = vim.api.nvim_command
 local fn = vim.fn
 
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -30,6 +31,10 @@ return require("packer").startup(function(use)
     use { "L3MON4D3/LuaSnip" }
     use { "tami5/lspsaga.nvim" }
     use {"folke/trouble.nvim"}
+
+    -- Code Formatting with lsp
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
 -- }}
 
 -- {{ CMP
@@ -82,9 +87,16 @@ return require("packer").startup(function(use)
       -- tag = "release" -- To use the latest release
     }
 
-    use {
+    use { -- Embed Neovim in browsers
         "glacambre/firenvim",
         run = function() vim.fn["firenvim#install"](0) end
     }
+
+    use { -- Better TODO comments for neovim
+      "folke/todo-comments.nvim",
+      requires = "nvim-lua/plenary.nvim",
+    }
+
+    use {"ntpeters/vim-better-whitespace"} -- highlight trailing whitespaces
 -- }}
 end)
