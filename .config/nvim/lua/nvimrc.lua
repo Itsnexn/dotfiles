@@ -51,7 +51,7 @@ o.numberwidth = 3
 o.signcolumn= "yes:1"
 -- Text
 o.wrap = false
-o.colorcolumn = "90"
+o.colorcolumn = "80"
 o.expandtab = true
 o.tabstop = 4
 o.shiftwidth = 4
