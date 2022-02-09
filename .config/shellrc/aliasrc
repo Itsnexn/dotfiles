@@ -25,7 +25,8 @@ alias tb="nc termbin.com 9999"
 
 # Changing "ls" to "exa"
 if [ -n "$(command -v exa)" ]; then
-    alias ls="exa -lh --color=always --group-directories-first"
+    alias ls="exa --color=always --group-directories-first"
+    alias ll="exa -l --color=always --group-directories-first"
 fi
 
 # Clipboard

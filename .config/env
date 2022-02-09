@@ -17,6 +17,7 @@ export VISUAL="nvim"
 export BROWSER="brave"
 
 export MANPAGER="less"
+
 # Use bat
 if [ -n "$(command -v bat)" ]; then
     export PAGER="less"
