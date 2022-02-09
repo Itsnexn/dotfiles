@@ -18,7 +18,7 @@ export BROWSER="brave"
 
 export MANPAGER="less"
 # Use bat
-if ![ -x "$(command -v bat)" ]; then
+if ! [ -x "$(command -v bat)" ]; then
     export PAGER="less"
 else
     export PAGER="bat"
