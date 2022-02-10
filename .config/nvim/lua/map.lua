@@ -3,6 +3,7 @@
 -- =============================================
 local bind = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
+local wk = require("which-key")
 
 -- {{{ Better Movement
 -- Move between windows
@@ -26,75 +27,83 @@ bind("n", "J", "mzJ`z", { noremap = true })
 bind("n", "<TAB>", ":BufferLineCycleNext<CR>", default_opts)
 bind("n", "<S-TAB>", ":BufferLineCyclePrev<CR>", default_opts)
 bind("n", "<S-x>", ":Bdelete this<CR>", default_opts)
-
 -- }}}
 
 -- {{{ Move Lines
 -- Normal mode
-bind("v", "<s-j>", ':m ">+1<CR>gv=gv', { noremap = true })
-bind("v", "<s-k>", ':m "<-1<CR>gv=gv', { noremap = true })
+bind("v", "<S-j>", ":m '>+1<CR>gv=gv", { noremap = true })
+bind("v", "<S-k>", ":m '<-2<CR>gv=gv", { noremap = true })
 -- Insert mode
-bind("i", "<m-j>", "<esc>:m .+1<CR>==i", { noremap = true })
-bind("i", "<m-k>", "<esc>:m .-2<CR>==i", { noremap = true })
+bind("i", "<C-j>", "<esc>:m .+1<CR>==i", { noremap = true })
+bind("i", "<C-k>", "<esc>:m .-2<CR>==i", { noremap = true })
 -- }}}
 
--- {{{ Dashboard
-bind("n", "<leader>d", ":Dashboard<CR>", default_opts)
--- }}}
-
--- {{{ Lsp
-bind("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", default_opts)
-bind("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", default_opts)
-bind("n", "gr", "<cmd>Lspsaga rename<cr>", default_opts)
-bind("n", "gc", "<cmd>Lspsaga code_action<cr>", default_opts)
-bind("x", "gc", ":<c-u>Lspsaga range_code_action<cr>", default_opts)
-bind("n", "K", "<cmd>Lspsaga hover_doc<cr>", default_opts)
-bind("n", "gl", "<cmd>Lspsaga show_line_diagnostics<cr>", default_opts)
-bind("n", "<leader>>", "<cmd>Lspsaga diagnostic_jump_next<cr>", default_opts)
-bind("n", "<leader><", "<cmd>Lspsaga diagnostic_jump_prev<cr>", default_opts)
+-- {{{ Other
 bind("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>", {})
 bind("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>", {})
-bind("n", "gt", "<cmd>Trouble lsp_document_diagnostics<CR>", {})
-
-bind("n", "gf", "<cmd>lua vim.lsp.buf.formatting()<CR><CR>", default_opts)
-bind("x", "gf", "<cmd>:lua vim.lsp.buf.range_formatting({})<CR>", default_opts)
 -- }}}
 
--- {{{ Term
-bind("n", "", ":ToggleTerm<CR>", default_opts)
-bind("n", "<leader>tg", "<cmd>lua _Lazygit_toggle()<CR>", default_opts)
-bind("n", "<leader>tp", "<cmd>lua _Python_toggle()<CR>", default_opts)
-bind("n", "<leader>r", "<cmd>lua _Run()<CR>", default_opts)
--- }}}
+-- Normal mode
+wk.register({
+	g = { -- LSP Actions
+		name = "LSP Actions",
+		d = { "<CMD>lua vim.lsp.buf.definition()<CR>", "Goto Defenition" },
+		D = { "<CMD>lua vim.lsp.buf.declaration()<CR>", "Goto Declaration" },
+		r = { "<CMD>Lspsaga rename<CR>", "Rename" },
+		["<leader>"] = { "<CMD>Lspsaga code_action<CR>", "Code Action" },
+		k = { "<CMD>Lspsaga hover_doc<CR>", "Hower Doc" },
+		g = { "<CMD>Lspsaga show_line_diagnostics<CR>", "Show Line Diagnostics" },
+		n = { "<CMD>Lspsaga diagnostic_jump_next<CR>", "Diagnostics Next" },
+		N = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Diagnostics Perv" },
+		l = { "<CMD>Trouble lsp_document_diagnostics<CR>", "Diagnostics List" },
+		f = { "<CMD>lua vim.lsp.buf.formatting()<CR>", "Format Buffer" },
+	},
+	f = { -- File Action
+		name = "File Actions",
+		f = { "<CMD>lua Find_files()<CR>", "Find Files" },
+		e = { "<CMD>e ~/.config/nvim/init.lua<CR>", "Edit Config File" },
+		n = { "<CMD>ene!<CR>", "New File" },
+		h = { "<CMD>Telescope oldfiles<CR>", "Old Files" },
+	},
+	t = { -- ToggleTerm
+		name = "Terminal",
+		t = { "<CMD>ToggleTerm<CR>", "New Terminal" },
+		g = { "<CMD>lua _Lazygit_toggle()<CR>", "Open LazyGit" },
+		p = { "<CMD>lua _Python_toggle()<CR>", "Open Bpython" },
+	},
+	w = { -- Vim Wiki
+		name = "Vim Wiki",
+		w = { name = "Open wiki index" },
+		t = { name = "Open wiki index in new tab" },
+		s = { name = "Select and open wiki" },
+		d = { name = "Delete Current wiki" },
+		r = { name = "Rename Current wiki" },
+		x = { "<CMD>VimwikiToggleListItem<CR>", "Toggle List State" },
+	},
+	b = {
+		name = "Buffer Action",
+		n = { "<CMD>BufferLineCycleNext<CR>", "Next Buffer" },
+		N = { "<CMD>BufferLineCyclePerv<CR>", "Previous Buffer" },
+		m = { "<CMD>BufferLineMoveNext<CR>", "Move Buffer to Right" },
+		M = { "<CMD>BufferLineMovePrev<CR>", "Move Buffer to Left" },
+		d = { "<CMD>Bdelete this<CR>", "Close Buffer" },
+	},
+	["<C-j>"] = { "<Cmd>BufferLineMovePrev<CR>", "BufferLine move to Left" },
+	["<C-k>"] = { "<Cmd>BufferLineMoveNext<CR>", "BufferLine move to Right" },
+	["<leader>"] = { "<CMD>StripWhitespace<CR>", "Strip Whitespaces" },
+	r = { "<CMD>lua _Run()<CR>", "Shell Run" },
+	h = { "<CMD>Telescope help_tags<CR>", "Help" },
+	e = { "<CMD>NvimTreeToggle<CR>", "File Tree Toggle" },
+	E = { "<CMD>Telescope symbols<CR>", "Emoji List" },
+	s = { "<CMD>lua require('spectre').open()<CR>", "Find & Replace" },
+	c = { "<CMD>Commentary<CR>", "Comment" },
+}, { mode = "n", prefix = "<leader>", noremap = true, silent = true })
 
--- {{{ Files/Explorer
-bind("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", default_opts)
-bind("n", "<leader>E", ":e ~/.config/nvim/init.lua<CR>", default_opts)
--- }}}
-
--- {{{ Comment
-bind("n", "<leader>c", "<CMD>Commentary<CR>", {})
-bind("x", "<leader>c", ":Commentary<CR>", {})
--- }}}
-
--- {{{ Telescope
-bind("c", "syntax", "<cmd>Telescope filetypes<CR>", {})
-bind("n", "<leader>f", "<cmd>lua Find_files()<CR>", {})
-bind("n", "<leader>h", "<cmd>Telescope help_tags<CR>", {})
-bind("n", "<leader>ge", "<cmd>Telescope symbols<CR>", {})
--- }}}
-
--- {{{ Others
--- Nvim Specture
-bind("n", "<leader>S", "<CMD>lua require('spectre').open()<CR>", { noremap = true, silent = true })
-
--- Remove my custome Placeholder: <+ something +>
-bind("n", "<leader>+", "/<+.*+><CR>gnd:noh<CR>i", {})
-
--- Nvim Matchit
-bind("n", "<c-m>", "%", { silent = true })
-bind("n", '<leader>"', ":s/\\'/\"/g", {})
-
--- Sudo write trick
-bind("c", "W!", "execute 'silent! write !sudo tee % >/dev/null' <bar> edit!", { noremap = true })
--- }}}
+-- Visual mode
+wk.register({
+	c = { ":Commentary<CR>", "Comment" },
+	g = {
+		name = "LSP Actions",
+		f = { ":lua vim.lsp.buf.formatting()<CR>", "Format" },
+	},
+}, { mode = "x", prefix = "<leader>", noremap = true, silent = true })

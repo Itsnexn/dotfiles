@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>%title%</title>
+    %pygments%
+    <!--Custome Styles for Vimwiki -->
+    <style>
+      :root {
+        --bg: #1a1b26;
+        --container-bg: #24283b;
+        --accent: #414868;
+        --fg: #a9b1d6;
+        --fg-bright: #d5d6db;
+        --red: #f7768e;
+        --green: #9ece6a;
+        --blue: #2ac3de;
+        --cyan: #7dcfff;
+        --purple: #bb9af7;
+        --orange: #ff9e64;
+        --yellow: #e0af68;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: iosevka;
+        font-size: 20px;
+        background-color: var(--bg);
+        color: var(--fg);
+      }
+
+      h1 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+      }
+
+      p,
+      div {
+        font-size: 1rem;
+        line-height: 12px;
+        font-weight: 400;
+        white-space: pre-wrap;
+      }
+
+      a {
+        color: var(--blue);
+      }
+
+      ol {
+        list-style-position: inside;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      ul {
+        list-style: none;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .done1::before,
+      .done2::before,
+      .done3::before,
+      .done4::before,
+      .done5::before {
+        content: "☑";
+        color: var(--green);
+        font-size: 1.3rem;
+      }
+
+      .done0::before {
+        content: "☒";
+        color: var(--red);
+        font-size: 1.3rem;
+      }
+
+      img {
+        max-width: 100%;
+        padding: 2vh 0;
+      }
+
+      .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .main {
+        background-color: var(--container-bg);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        overflow-x: hidden;
+        padding: 0 0.8rem 0.8rem 0.8rem;
+        flex-grow: 1;
+        border: solid 1px var(--fg);
+      }
+    </style>
+  </head>
+
+  <body id="%title%">
+    <!-- %title% - Last Update: %date% -->
+    <center>
+      <div class="container">
+        <div class="main">
+          <div class="content">%content%</div>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
