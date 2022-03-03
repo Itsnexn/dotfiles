@@ -58,6 +58,7 @@ return require("packer").startup(function(use)
 	-- UI {{
 	use({ "folke/tokyonight.nvim", branch = "main" })
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use({ "lewis6991/spellsitter.nvim" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "norcalli/nvim-colorizer.lua" })
 	use({ "glepnir/dashboard-nvim" })

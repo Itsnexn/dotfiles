@@ -52,7 +52,7 @@ g.vimwiki_list = {
 		path_html = "~/Documents/Notes/html",
 		custom_wiki2html = "vimwiki_markdown",
 		html_filename_parameterization = 1,
-		css_name = "",
+		css_name = nil,
 	},
 }
 vim.cmd("autocmd FileType vimwiki nnoremap <buffer> <Leader>wx :VimwikiToggleListItem<CR>")

@@ -57,6 +57,8 @@ wk.register({
 		N = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Diagnostics Perv" },
 		l = { "<CMD>Trouble lsp_document_diagnostics<CR>", "Diagnostics List" },
 		f = { "<CMD>lua vim.lsp.buf.formatting()<CR>", "Format Buffer" },
+		t = { "<CMD>LspStop<CR>", "LspStart" },
+		T = { "<CMD>LspStart<CR>", "LspStop" },
 	},
 	f = { -- File Action
 		name = "File Actions",
@@ -83,7 +85,7 @@ wk.register({
 	b = {
 		name = "Buffer Action",
 		n = { "<CMD>BufferLineCycleNext<CR>", "Next Buffer" },
-		N = { "<CMD>BufferLineCyclePerv<CR>", "Previous Buffer" },
+		N = { "<CMD>BufferLineCyclePrev<CR>", "Previous Buffer" },
 		m = { "<CMD>BufferLineMoveNext<CR>", "Move Buffer to Right" },
 		M = { "<CMD>BufferLineMovePrev<CR>", "Move Buffer to Left" },
 		d = { "<CMD>Bdelete this<CR>", "Close Buffer" },

@@ -5,6 +5,7 @@
 
 # Utils
 alias vim="nvim"
+alias v="nvim"
 alias wiki="vim -c VimwikiIndex"
 alias ed="ed -p '➡ '"
 alias grep="grep --color=auto"

@@ -18,7 +18,7 @@ from settings.screens import screens
 from settings.mouse import mouse
 from settings.path import qtile_path
 
-from os import system 
+from os import system
 import subprocess
 
 
@@ -30,7 +30,7 @@ def autostart():
 main = None
 dgroups_key_binder = None
 dgroups_app_rules = []
-follow_mouse_focus = True
+follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 auto_fullscreen = True

@@ -4,10 +4,11 @@ from os import environ
 
 
 mod = "mod4"
-myTerminal = "terminator"
+myTerminal = "kitty"
 
 def termRun(cmd):
-    return myTerminal + " -e " + f"'{cmd}'"
+    global myTerminal
+    return f"{myTerminal} {cmd}"
 
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [

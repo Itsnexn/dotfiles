@@ -40,9 +40,9 @@ def workspaces():
         # separator(), # just using when rounded corner is set
         widget.GroupBox(
             **base(fg="light"),
-            font="UbuntuMono Nerd Font",
-            fontsize=19,
-            margin_y=3,
+            font="Iosevka",
+            fontsize=16,
+            margin_y=1,
             margin_x=0,
             padding_y=8,
             borderwidth=2,
@@ -112,7 +112,7 @@ primary_widgets = [
     widget.Wlan(
         disconnected_message="Disconnect",
         format="{essid}",
-        interface="wlp3s0",
+        interface="wlan0",
         mouse_callbacks={
             'Button1': lambda: qtile.cmd_spawn("nmcli-rofi"),
         },
@@ -144,14 +144,8 @@ primary_widgets = [
     # just a seprator
     txt(bg="color1", text=" | "),
 
-    # Date
-    widget.Clock(**base(bg="color1"), format="%d %B %Y"),
-
-    # just a seprator
-    txt(bg="color1", text=" | "),
-
     # Clock
-    widget.Clock(**base(bg="color1"), format="%H:%M:%S "),
+    widget.Clock(**base(bg="color1"), format=" %a %B %d - %H:%M "),
 
     powerline("dark", "color1"),
 
@@ -178,7 +172,7 @@ secondary_widgets = [
 
     powerline("dark", "color2"), ]
 widget_defaults = {
-    "font": "UbuntuMono Nerd Font Bold",
+    "font": "Iosevka",
     "fontsize": 14,
     "padding": 5,
 }

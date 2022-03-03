@@ -30,7 +30,7 @@ cfg.apps = {
 cfg.network = {
     wlan_interface  = "wlan0",
     eth_interface   = "eth0",
-    network_manager     = "nmtui",
+    network_manager     = run_term("nmtui"),
 }
 
 cfg.update = {

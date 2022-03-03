@@ -1,48 +1,80 @@
+# ███╗   ██╗███████╗██╗  ██╗███╗   ██╗
+# ████╗  ██║██╔════╝╚██╗██╔╝████╗  ██║
+# ██╔██╗ ██║█████╗   ╚███╔╝ ██╔██╗ ██║
+# ██║╚██╗██║██╔══╝   ██╔██╗ ██║╚██╗██║
+# ██║ ╚████║███████╗██╔╝ ██╗██║ ╚████║
+# ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝
+#
+# Twitter : https://twitter.com/itsnexn
+# Github  : https://github.com/Itsnexn
+# Website : Itsnexn.me
+#
+# MIT License
+
 unbind-key j
 unbind-key k
 unbind-key h
 unbind-key H
 unbind-key L
 unbind-key c
-unbind-key ,
-browser "chromium %u"
+unbind-key .
+unbind-key g
+unbind-key G
+unbind-key s
+unbind-key S
 
 # Feed settings
 prepopulate-query-feeds yes
 refresh-on-startup yes
-#show-read-feeds no
+
+# show-read-feeds no
 auto-reload yes
 
-macro w set browser "vlc %u" ; open-in-browser ; set browser "brave %u"
+macro p set browser "mpv %u" ; open-in-browser ; set browser "brave %u"
 
 # bind keys
-bind-key ; macro-prefix
+bind-key . macro-prefix
 bind-key h quit
-bind-key BACKSPACE quit
 bind-key j down
 bind-key k up
 bind-key l open
-bind-key H prev-feed
-bind-key L next-feed
-bind-key c toggle-show-read-feeds
+bind-key K prev-feed
+bind-key J next-feed
+bind-key z toggle-show-read-feeds
+bind-key g home
+bind-key G end
+bind-key s sort
+bind-key S rev-sort
 
-color background          color236   default
-color listnormal          color248   default
-color listnormal_unread   color6     default
-color listfocus           color236   color12
-color listfocus_unread    color15    color12
-color info                color248   color236
-color article             color248   default
+feedlist-title-format      " [%?F?Feeds&Your feeds?] (%u Unread, %t Total)%?F? matching filter `%F'&?%?T? - tag `%T'&?"
+articlelist-title-format   " [%T] (%u unread, %t total)%?F? matching filter `%F'&? - %U"
+searchresult-title-format  " [Search results] (%u unread, %t total)%?F? matching filter `%F'&?"
+filebrowser-title-format   " [ %?O?Open File&Save File? ] - %f"
+dirbrowser-title-format    " [ %?O?Open Directory&Save File? ] - %f"
+help-title-format          " [ Help ]"
+selecttag-title-format     " [ Select Tag ]"
+selectfilter-title-format  " [ Select Filter ]"
+itemview-title-format      " [ %T ]"
+urlview-title-format       " [ URLs ]"
+dialogs-title-format       " [ Dialogs ]"
 
-highlight all "---.*---" yellow
-highlight feedlist ".*(0/0))" black
-highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
-highlight article "(^Link:.*|^Date:.*)" default default
-highlight article "https?://[^ ]+" green default
-highlight article "^(Title):.*$" blue default
-highlight article "\\[[0-9][0-9]*\\]" magenta default bold
-highlight article "\\[image\\ [0-9]+\\]" green default bold
-highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
-highlight article ":.*\\(link\\)$" cyan default
-highlight article ":.*\\(image\\)$" blue default
-highlight article ":.*\\(embedded flash\\)$" magenta default
+#     Name                FG       BG
+color background          color7   default
+color listnormal          color7   default
+color listnormal_unread   color1   default
+color listfocus           color7   color8
+color listfocus_unread    color1   color8
+color info                color0   color4
+color article             color7   default
+
+
+highlight all      "---.*---"                                            yellow
+highlight feedlist ".*(0/0))"                                            black
+highlight article  "(^Feed:|^Title:|^Author:|^Link:|^Date:)"             blue default bold
+highlight article  "https?://[^ ]+"                                      yellow default
+highlight article  "\\[[0-9][0-9]*\\]"                                   red default bold
+highlight article  "\\[image\\ [0-9]+\\]"                                green default bold
+highlight article  "\\[embedded flash: [0-9][0-9]*\\]"                   green default bold
+highlight article  ":.*\\(link\\)$"                                      blue default
+highlight article  ":.*\\(image\\)$"                                     blue default
+highlight article  ":.*\\(embedded flash\\)$"                            magenta default
