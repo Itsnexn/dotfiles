@@ -15,6 +15,7 @@ export EDITOR="nvim"
 # export EDITOR="vim"
 export VISUAL="nvim"
 export BROWSER="brave"
+export TODO_PATH="$HOME/Documents/todo"
 
 export MANPAGER="less"
 

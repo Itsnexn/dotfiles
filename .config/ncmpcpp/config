@@ -128,7 +128,7 @@ cyclic_scrolling = no
 screen_switcher_mode = playlist, browser
 startup_screen = playlist
 
-startup_slave_screen = "visualizer"
+# startup_slave_screen = "visualizer"
 # startup_slave_screen_focus = no
 
 ## Default width of locked screen (in %).  Acceptable values are from 20 to 80.
@@ -186,6 +186,6 @@ statusbar_time_color = magenta:b
 player_state_color = magenta:b
 
 # Borders and stuff
-main_window_color = magenta 
+main_window_color = magenta
 window_border_color = 9
 active_window_border = blue

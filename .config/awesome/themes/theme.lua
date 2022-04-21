@@ -112,12 +112,13 @@ theme.icon_brightness = icon_dir .. "brightness.svg"
 
 -- Taglist
 
-theme.taglist_font = theme.font
 if not cfg.taglist.tags then
     theme.taglist_fg_focus = colors.purple
+    theme.taglist_font = "SourceSansPro 14"
 else
-    theme.taglist_bg_focus = colors.purple
-    theme.taglist_fg_focus = colors.bg
+    theme.taglist_bg_focus = colors.active
+    theme.taglist_fg_focus = colors.fg
+    theme.taglist_font = "SourceSansPro 10"
 end
 
 theme.taglist_fg_empty = colors.fg .. "a0"

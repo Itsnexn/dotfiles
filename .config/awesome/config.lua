@@ -41,8 +41,9 @@ cfg.update = {
 cfg.taglist = {
     -- tags = {" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "},
     -- tags = {" I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII ", " IX "},
-    tag_selected = " ",
-    tag_default = " "
+    tags = {" 一 ", " 二 ", " 三 ", " 四 ", " 五 ", " 六 ", " 七 ", " 八 ", " 九 "},
+    -- tag_selected = " ",
+    -- tag_default = " "
 }
 
 return cfg

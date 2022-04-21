@@ -204,7 +204,7 @@ local globalkeys = gears.table.join(
         {},
         "XF86MonBrightnessUp",
         function()
-            brightness_widget:inc(5)
+            brightness_widget:inc()
         end,
         {description = "Increase brightness by 5%", group = "hotkeys"}
     ),
@@ -213,7 +213,7 @@ local globalkeys = gears.table.join(
         {},
         "XF86MonBrightnessDown",
         function()
-            brightness_widget:dec(5)
+            brightness_widget:dec()
         end,
         {description = "Decrease brightness by 5%", group = "hotkeys"}
     ),
