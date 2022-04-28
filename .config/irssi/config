@@ -7,10 +7,26 @@ servers = (
     ssl_verify = "no";
     autoconnect = "no";
     password = "";
+  },
+  {
+    address = "irc.libera.chat";
+    chatnet = "Libra";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    autoconnect = "yes";
+    password = "";
   }
 );
 
-chatnets = { freenode = { type = "IRC"; }; };
+chatnets = {
+    freenode = {
+        type = "IRC";
+    };
+    Libra = {
+        type = "IRC";
+    };
+};
 
 
 aliases = {
@@ -61,4 +77,14 @@ aliases = {
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
   RESET = "set -default";
+};
+
+settings = {
+  core = {
+    real_name = "Itsnexn";
+    user_name = "itsnexn";
+    nick = "itsnexn";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { hide_colors = "no"; };
 };
