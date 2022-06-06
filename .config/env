@@ -32,25 +32,37 @@ fi
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.local/cache"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_RUNTIME_DIR="$HOME/.local/runtime"
 
-export ZDOTDIR="$HOME/.config/zsh"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
-
-export GOPATH="$XDG_DATA_HOME/go"
-
-# I hate __pycache__
-export PYTHONDONTWRITEBYTECODE=1
-
+# History files
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export LESSHISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/lesshistory"
 
+# Apps
 export WEECHAT_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/weechat"
 export MBSYNCRC="${XDG_CONFIG_HOME:-$HOME/.config}/mbsync/config"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
-export GTK2_RC_FILES="${XDG_CONFIG_HOME/gtk-2.0:-$HOME/.config/gtk-2.0}/gtkrc-2.0"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv" # nvidia
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker" # Docker config directory
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+export PYTHONDONTWRITEBYTECODE=1 # __pycache__
+export GOPATH="$XDG_DATA_HOME/go"
+export KDEHOME="$XDG_CONFIG_HOME/kde"
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
+
+# RUBY
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle"
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle"
 
 # =======================================
 # => Other app Settings
@@ -58,10 +70,9 @@ export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
 export FZF_DEFAULT_OPTS="\
     --height=20% \
     --reverse \
-    --color=fg:#a9b1d6,bg:#1a1b26,hl:#9ece6a \
-    --color=fg+:#a9b1d6,bg+:#1a1b26,hl+:#9ece6a \
-    --color=info:#9ece6a,prompt:#f7768e,pointer:#af5fff \
-    --color=marker:#f7768e,spinner:#9ece6a,header:#e0af68"
+    --color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD \
+    --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 \
+    --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD"
 
 export LESS="--mouse --use-color -r"
 export JAVA_FONTS=/usr/share/fonts/TTF
