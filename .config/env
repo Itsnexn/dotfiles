@@ -33,7 +33,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.local/cache"
 export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_RUNTIME_DIR="$HOME/.local/runtime"
+# export XDG_RUNTIME_DIR="$HOME/.local/runtime"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
@@ -81,5 +81,5 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 # =======================================
 # => PATH
 # =======================================
-export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/scripts:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/scripts:$HOME/.cargo/bin:$XDG_DATA_HOME/go/bin"
 
