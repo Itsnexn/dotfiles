@@ -1,4 +1,5 @@
-<!-- Made by Nexn with VIM :) -->
+<!-- Written by Nexn with VIM :) -->
+
 <p align="center">
   <img height=90 src="logo.png">
 </p>
@@ -15,27 +16,47 @@
 ---
 
 ## Table of Contents
-- [Current setup](#screenshot)
+- [Configuration Files](#cfg)
+- [FAQ](#faq)
 - [What are dotfiles](#dotfile-explain)
 - [How To Manage Your Own Dotfiles](#manage-dotfiles)
 - [License](#license)
 
-<h2 id="screenshot">Current Setup<h2>
+<h2 id="cfg">Configuration Files</h3>
 
-<img src="screenshot.png"/>
+- [Rofi - Application Menu](https://github.com/davatorium/rofi)
+- [Irssi - IRC Client](https://irssi.org/)
+- [Kitty - Terminal Emulator](https://sw.kovidgoyal.net/kitty/)
+- [Mpd - Music player Deamon](https://www.musicpd.org/)
+- [Newsboat - RSS Reader](https://newsboat.org/)
+- [Picom - X11 compositor](https://github.com/jonaburg/picom)
+- [Dunst - Notification deamon](https://dunst-project.org/)
+- [tmux - terminal multiplexer](https://github.com/tmux/tmux)
+- [zathura - Document reader](https://pwmt.org/projects/zathura/)
+- [zsh - the z shell](https://www.zsh.org/)
+- [ranger - TUI File manager](https://github.com/ranger/ranger)
+  - _I'll move to `lf` in the feature because `ranger` is slow._
+- [starship - cross platform prompt](https://starship.rs/)
 
-<h3 id="screenshot">FAQ</h3>
+<h4>Other Configs:</h4>
 
-- Colorscheme: Tokyonight
+- [Neovim    - My neovim config](https://github.com/itsnexn/nvim)
+- [AwesomeWm - My Awesome window manager config (Old WM)](https://github.com/itsnexn/awesomewm)
+- [DWM       - My build of suckless DWM (Current WM)](https://github.com/itsnexn/dwm)
+
+
+<h2 id="faq">FAQ</h2>
+
+- Colorscheme: [Catppuccin](https://github.com/catppuccin/catppuccin)
 - Fonts:
     - iosevka
+    - JetBrainsMono Nerd Font
     - Open Sans Pro
-    - hack nerd font
     - Font awesome
 - Terminal: Kitty
 - Icon theme: Arc
 - Browser: Brave (why not firefox!? cuz its slow)
-- WM: AwesomeWM
+- WM: DWM
 
 <h2 id="dotfile-explain">What Are Dotfiles?</h2>
 
@@ -65,3 +86,6 @@ provided with the software.
 
 #### [License link](./LICENSE.txt)
 
+
+
+> _Keep Calm And Use GNU/Linux_
