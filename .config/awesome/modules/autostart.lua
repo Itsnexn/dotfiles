@@ -15,7 +15,8 @@ local startup_apps = {
     "synclient VertScrollDelta=-79",
     "synclient HorizScrollDelta=-79",
     "synclient TapButton1=1",
-	"xbacklight -set 100"
+    "xset r rate 300 80",
+    "sh -c exec --no-startup-id /usr/lib/pam_kwallet_init"
 }
 
 

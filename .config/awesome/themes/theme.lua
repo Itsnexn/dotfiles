@@ -7,7 +7,7 @@ local icon_dir = theme_dir .. "icons"
 local cfg = require("config")
 local theme = {}
 
-theme.mode = "tokyonight"
+theme.mode = "catppuccin"
 -- Fonts
 -- Font sizes are hardcoded in the file
 theme.font = "SourceSansPro 14"
@@ -25,6 +25,7 @@ local colors = {}
 
 colors.transparent = "#00000000"
 
+
 if theme.mode == "tokyonight" then
     colors.bg = "#1A1B26"
     colors.fg = "#A9B1D6"
@@ -37,6 +38,18 @@ if theme.mode == "tokyonight" then
     colors.yellow = "#E0AF68"
     colors.orange = colors.yellow
     colors.purple = "#9A7ECC"
+elseif theme.mode == "catppuccin" then
+    colors.bg = "#1E1D2D" --
+    colors.fg = "#D9E0EE" --
+    colors.active = "#45475a" --
+    colors.gray = "#45475a" --
+    colors.red = "#F28FAD" --
+    colors.blue = "#83bae8" --
+    colors.cyan = "#96CDFB" --
+    colors.green = "#ABE9B3" --
+    colors.yellow = "#fab387" --
+    colors.orange = colors.yellow
+    colors.purple = "#cba6f7" --
 else
     colors.bg = "#11111199"
     colors.fg = "#ffffff"
