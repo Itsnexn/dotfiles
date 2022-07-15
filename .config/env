@@ -81,5 +81,20 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 # =======================================
 # => PATH
 # =======================================
-export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/scripts:$HOME/.cargo/bin:$XDG_DATA_HOME/go/bin"
+export PATH="/usr/bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
+export PATH="$PATH:$HOME/.local/share/go/bin"
 
+export PATH="$PATH:/opt/android-sdk/platform-tools"
+export PATH="$PATH:/opt/android-sdk/tools"
+export PATH="$PATH:/opt/android-sdk/tools/bin"
+export PATH="$PATH:/opt/jython/bin/"
+export PATH="$PATH:/usr/bin/core_perl"
+export PATH="$PATH:/usr/bin/vendor_perl"
+export PATH="$PATH:/usr/lib/jvm/default/bin"
+export PATH="$PATH:$XDG_CONFIG_HOME/emacs/bin"
