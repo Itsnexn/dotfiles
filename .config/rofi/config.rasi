@@ -1,27 +1,30 @@
 @theme "/dev/null"
 
 * {
-    font:   "FiraCode Nerd Font Medium 12";
+    font:   "JetBrainsMono Nerd Font 13";
 
     bg:     #1E1D2F;
-    fg0:     #D9E0EE;
+    fg:     #CDD6F4;
 
     accent-color:     #CBA6F7;
     urgent-color:     #F38BA8;
 
     background-color:   transparent;
-    text-color:         @fg0;
+    text-color:         @fg;
 
-    margin:     0;
-    padding:    0;
-    spacing:    0;
-
-
+    padding:    5;
+    show-icons: false;
+    terminal: "kitty";
+    run-shell-command: "{terminal} sh -c {cmd}";
+    icon-theme: "Arc";
+    drun-match-fields: "name,exec";
+    disable-history: false;
+    case-sensitive: false;
 }
 
 window {
     location:   center;
-    width:      480;
+    width:      540;
 
     border: 2px;
 	border-color: @accent-color;
@@ -31,8 +34,13 @@ window {
 }
 
 inputbar {
-    spacing:    8px;
-    padding:    8px;
+    spacing:    0px;
+    padding:    0px 0px 8px 0px;
+    margin:     20px 20px 0px 20px;
+
+    border: 0px 0px 2px 0px;
+	border-color: @accent-color;
+	border-radius: 0px;
 
     background-color:   @bg;
 }
@@ -42,7 +50,7 @@ prompt, entry, element-icon, element-text {
 }
 
 prompt {
-    text-color: @accent-color;
+    text-color: @fg;
 }
 
 textbox {
@@ -51,20 +59,19 @@ textbox {
 }
 
 listview {
-    padding:    4px 0;
     lines:      8;
     columns:    1;
-
-    fixed-height:   false;
+    fixed-height:   true;
 }
 
 element {
     padding:    8px;
-    spacing:    8px;
+    spacing:    0px;
+    margin:     5;
 }
 
 element normal normal {
-    text-color: @fg0;
+    text-color: @fg;
 }
 
 element normal urgent {
@@ -88,9 +95,10 @@ element selected urgent {
 }
 
 element-icon {
-    size:   0.8em;
+    size:   1.0em;
 }
 
 element-text {
     text-color: inherit;
+    cursor:     pointer;
 }
