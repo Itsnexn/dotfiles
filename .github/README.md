@@ -35,7 +35,6 @@
 - [zathura - Document reader](https://pwmt.org/projects/zathura/)
 - [zsh - the z shell](https://www.zsh.org/)
 - [ranger - TUI File manager](https://github.com/ranger/ranger)
-  - _I'll move to `lf` in the feature because `ranger` is slow._
 - [starship - cross platform prompt](https://starship.rs/)
 
 <h4>Other Configs:</h4>
