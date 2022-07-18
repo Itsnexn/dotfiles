@@ -1,0 +1,11 @@
+@theme "./config.rasi"
+
+inputbar {
+    enabled: false;
+}
+
+listview {
+    lines:      5;
+    columns:    2;
+    fixed-height:   false;
+}
