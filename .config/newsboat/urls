@@ -1,0 +1,68 @@
+# ███╗   ██╗███████╗██╗  ██╗███╗   ██╗
+# ████╗  ██║██╔════╝╚██╗██╔╝████╗  ██║
+# ██╔██╗ ██║█████╗   ╚███╔╝ ██╔██╗ ██║
+# ██║╚██╗██║██╔══╝   ██╔██╗ ██║╚██╗██║
+# ██║ ╚████║███████╗██╔╝ ██╗██║ ╚████║
+# ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝
+#
+# Twitter : https://twitter.com/itsnexn
+# Github  : https://github.com/Itsnexn
+# Website : Itsnexn.me
+#
+# MIT License
+
+# Queries ============================================================
+"query:Starred:flags # \"s\""
+"query:Unread Articles:unread = \"yes\""
+
+# News ===============================================================
+"News ============================================="
+https://archlinux.org/feeds/news/ "~Arch Linux News" "( News )"
+https://feeds.feedburner.com/TheHackersNews?format=xml "~The Hacker News" "( News )"
+
+# Podcasts ===========================================================
+"Podcasts ========================================="
+https://feeds.megaphone.fm/darknetdiaries "~Darknet Diaries" "( Podcasts )"
+https://malicious.life/feed/podcast/ "~Malicious Life" "( Podcasts )"
+https://dayzerosec.com/feed.xml "~DAY [0]" "( Podcasts )"
+
+# Reddit =============================================================
+"Reddit ==========================================="
+"query:OC:title =~ \"\\[OC\\]\""
+https://www.reddit.com/r/commandline.rss "~r/commandline" "( Reddit )"
+https://www.reddit.com/r/neovim.rss "~r/neovim" "( Reddit )"
+https://www.reddit.com/r/linux.rss "~r/linux" "( Reddit )"
+https://www.reddit.com/r/unixporn.rss "~r/unixporn" "( Reddit )"
+
+# Twitter ============================================================
+"Twitter =========================================="
+https://nitter.net/torproject/rss "~Tor Project" "( Twitter )"
+https://nitter.net/suntzucyber/rss "~Suntzucyber" "( Twitter )"
+https://nitter.net/seytonic/rss "~Seytonic" "( Twitter )"
+https://nitter.net/owasp/rss "~OWASP" "( Twitter )"
+https://nitter.net/packet_storm/rss "~Packet Storm" "( Twitter )"
+https://nitter.net/defcon/rss "~DEFCON" "( Twitter )"
+https://nitter.net/vulnhub/rss "~VulnHub" "( Twitter )"
+https://nitter.net/obsdmd/rss "~Obsidian" "( Twitter )"
+https://nitter.net/mitreattack/rss "~MITRE ATT&CK" "( Twitter )"
+https://nitter.net/cvenew/rss "~CVE News" "( Twitter )"
+
+# Youtube ============================================================
+"Youtube =========================================="
+https://youtube.com/feeds/videos.xml?channel_id=UClcE-kVhqyiHCcjYwcpfj9w "~LiveOverFlow"    "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCW6MNdOsqv2E9AjQkv9we7A "~PwnFunction"     "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw "~John Hammond"    "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCa6eh7gCkpPo5XXUDfygQQA "~Ippsec"          "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCQN2DsjnYH60SFBIA6IkNwg "~Stok"            "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCy8ntxFEudOCRZYT1f7ya9Q "~13Cubed"         "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCZDyl7G-Lq-EMVO8PfDFp9g "~BugBountyReportExplained" "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Fireship"        "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCS0N5baNlQWJCUrhCEo8WlA "~Ben Eater"       "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ "~Andreas Kling"   "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UC6biysICWOJ-C3P4Tyeggzg "~theteachr"       "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA "~JDH"             "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith"      "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw "  "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCW6xlqxSY3gGur4PkGPEUeA "~Seytonic"        "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~ThePrimeagen"    "( Youtube )"
+https://youtube.com/feeds/videos.xml?channel_id=UCvl8fyJvWTbmIf_0lObYafg "~Tsoding"         "( Youtube )"

@@ -11,42 +11,57 @@
 #
 # MIT License
 
-unbind-key j
-unbind-key k
-unbind-key h
-unbind-key H
-unbind-key L
-unbind-key c
-unbind-key .
-unbind-key g
-unbind-key G
-unbind-key s
-unbind-key S
+# General ============================================================
 
+external-url-viewer "urlscan -d --no-browser | rofi -dmenu -theme menu -mesg 'Select URL' | xargs urlhandler"
+# auto-reload yes
+# refresh-on-startup yes
 # Feed settings
-prepopulate-query-feeds yes
-refresh-on-startup yes
+# prepopulate-query-feeds yes
 
-# show-read-feeds no
-auto-reload yes
+notify-format       "%d new articles (%n unread articles, %f unread feeds)"
 
-macro p set browser "mpv %u" ; open-in-browser ; set browser "brave %u"
+# Keybindings ========================================================
 
-# bind keys
+unbind-key ,
+
 bind-key . macro-prefix
-bind-key h quit
 bind-key j down
 bind-key k up
-bind-key l open
-bind-key K prev-feed
-bind-key J next-feed
-bind-key z toggle-show-read-feeds
-bind-key g home
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
 bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key h quit
+bind-key a toggle-article-read
+bind-key U show-urls
 bind-key s sort
 bind-key S rev-sort
+bind-key z toggle-show-read-feeds
+bind-key s pb-download
+bind-key S pb-play
+
+# Macros =============================================================
+
+macro 1 set browser "mpv --player-operation-mode=pseudo-gui -- %u &"; one; set browser urlhandler
+macro 2 set browser "mpv --player-operation-mode=pseudo-gui -- %u &"; two; set browser urlhandler
+macro 3 set browser "mpv --player-operation-mode=pseudo-gui -- %u &"; three; set browser urlhandler
+
+macro p set browser "mpv --player-operation-mode=pseudo-gui -- %u &"; open-in-browser; set browser urlhandler
+macro b set browser "$BROWSER %u"; open-in-browser ; set browser urlhandler
+macro B set browser "elinks %u"; open-in-browser ; set browser urlhandler
+macro c set browser "echo %u | xclip -r -sel c"; open-in-browser ; set browser urlhandler
+
+# UI =================================================================
 
 feedlist-title-format      " [%?F?Feeds&Your feeds?] (%u Unread, %t Total)%?F? matching filter `%F'&?%?T? - tag `%T'&?"
+feedlist-format            "%3i %n %8u %t"
+articlelist-format         "%4i %f %D - %?T?%-27T ?%t %> %D"
 articlelist-title-format   " [%T] (%u unread, %t total)%?F? matching filter `%F'&? - %U"
 searchresult-title-format  " [Search results] (%u unread, %t total)%?F? matching filter `%F'&?"
 filebrowser-title-format   " [ %?O?Open File&Save File? ] - %f"
@@ -59,18 +74,17 @@ urlview-title-format       " [ URLs ]"
 dialogs-title-format       " [ Dialogs ]"
 
 #     Name                FG       BG
-color background          color7   default
+color background          color7   color0
 color listnormal          color7   default
-color listnormal_unread   color1   default
-color listfocus           color7   color8
-color listfocus_unread    color1   color8
-color info                color0   color4
+color listnormal_unread   color3   default
+color listfocus           color7   color8 bold
+color listfocus_unread    color3   color8 bold
+color info                color0   color4 bold
 color article             color7   default
-
 
 highlight all      "---.*---"                                            yellow
 highlight feedlist ".*(0/0))"                                            black
-highlight article  "(^Feed:|^Title:|^Author:|^Link:|^Date:)"             blue default bold
+highlight article  "(^Feed:|^Title:|^Author:|^Link:|^Date:|^Podcast Download URL:)" color5 default bold
 highlight article  "https?://[^ ]+"                                      yellow default
 highlight article  "\\[[0-9][0-9]*\\]"                                   red default bold
 highlight article  "\\[image\\ [0-9]+\\]"                                green default bold
