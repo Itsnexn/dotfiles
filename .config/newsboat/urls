@@ -19,6 +19,12 @@
 "News ============================================="
 https://archlinux.org/feeds/news/ "~Arch Linux News" "( News )"
 https://feeds.feedburner.com/TheHackersNews?format=xml "~The Hacker News" "( News )"
+https://news.ycombinator.com/rss "~Hacker News" "( News )"
+https://news.ycombinator.com/showrss "~Hacker News - Shows" "( News )"
+
+# Blogs ==============================================================
+"Blogs ============================================"
+https://lukesmith.xyz/index.xml "~Luke Smith Blog" "( Blogs )"
 
 # Podcasts ===========================================================
 "Podcasts ========================================="
@@ -37,6 +43,7 @@ https://www.reddit.com/r/unixporn.rss "~r/unixporn" "( Reddit )"
 # Twitter ============================================================
 "Twitter =========================================="
 https://nitter.net/torproject/rss "~Tor Project" "( Twitter )"
+https://nitter.net/vxunderground/rss "~VX Underground" "( Twitter )"
 https://nitter.net/suntzucyber/rss "~Suntzucyber" "( Twitter )"
 https://nitter.net/seytonic/rss "~Seytonic" "( Twitter )"
 https://nitter.net/owasp/rss "~OWASP" "( Twitter )"

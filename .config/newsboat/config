@@ -13,13 +13,12 @@
 
 # General ============================================================
 
+browser "urlhandler %u"
 external-url-viewer "urlscan -d --no-browser | rofi -dmenu -theme menu -mesg 'Select URL' | xargs urlhandler"
 # auto-reload yes
 # refresh-on-startup yes
 # Feed settings
 # prepopulate-query-feeds yes
-
-notify-format       "%d new articles (%n unread articles, %f unread feeds)"
 
 # Keybindings ========================================================
 
