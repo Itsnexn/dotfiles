@@ -25,6 +25,14 @@ https://news.ycombinator.com/showrss "~Hacker News - Shows" "( News )"
 # Blogs ==============================================================
 "Blogs ============================================"
 https://lukesmith.xyz/index.xml "~Luke Smith Blog" "( Blogs )"
+https://blog.perfect.blue/atom.xml "~Perfect.blue Blog" "( Blogs )"
+https://pwning.net/feed.xml "~Plaid Parliament of Pwning Blog" "( Blogs )"
+https://blog.google/threat-analysis-group/rss/ "~Google threat analysis group" "( Blogs )"
+https://blog.pentesteracademy.com/feed "~Pentester Academy Blog" "( Blogs )"
+https://www.offensive-security.com/feed/ "~Offensive Security Blog" "( Blogs )"
+https://feeds.feedburner.com/0daylabs "~0Day Labs" "( Blogs )"
+https://buer.haus/feed/ "~BRETT BUERHAUS Blog" "( Blogs )"
+https://osandamalith.com/feed/ "~🔐Blog of Osanda" "( Blogs )"
 
 # Podcasts ===========================================================
 "Podcasts ========================================="
