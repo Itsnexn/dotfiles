@@ -1,16 +1,25 @@
-format="""$python$username[@](green bold)$hostname:$directory$cmd_duration$character"""
+# ███╗   ██╗███████╗██╗  ██╗███╗   ██╗
+# ████╗  ██║██╔════╝╚██╗██╔╝████╗  ██║
+# ██╔██╗ ██║█████╗   ╚███╔╝ ██╔██╗ ██║
+# ██║╚██╗██║██╔══╝   ██╔██╗ ██║╚██╗██║
+# ██║ ╚████║███████╗██╔╝ ██╗██║ ╚████║
+# ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝
+#
+# Twitter : https://twitter.com/itsnexn
+# Github  : https://github.com/Itsnexn
+# Website : Itsnexn.me
+#
+# MIT License
+
+# -format="""$python$username[@](green bold)$hostname:$directory$cmd_duration$character"""
+format="""$directory$cmd_duration $character"""
 right_format="""$git_branch $git_status"""
 
 [character]
 # Default
-success_symbol = "[\\$](gray)" 
-error_symbol = "[\\$](bold red)"
-vicmd_symbol    = "[\\$](bold gray)"
-
-# Vim Mode
-# success_symbol  = " \\[[INSERT](bold green)\\][\\$](bold gray)" 
-# vicmd_symbol    = " \\[[NORMAL](bold blue)\\][\\$](bold gray)"
-# error_symbol    = " \\[[INSERT](bold red)\\][\\$](bold red)"
+success_symbol = "[](gray)"
+error_symbol = "[](bold red)"
+vicmd_symbol    = "[](bold gray)"
 
 [username]
 style_user = "green bold"
@@ -42,13 +51,6 @@ modified = "[](purple)[$count](bold purple) "
 deleted = "[](red)[$count](bold red) "
 disabled = false
 
-
-[python]
-symbol = " "
-format='[\($symbol](yellow)[$virtualenv](bold blue)[\)](yellow)'
-detect_extensions = []
-disabled = false
-
 [cmd_duration]
-min_time = 2_000
-format = "  took [$duration](bold yellow) "
+min_time = 5_000
+format = "  took [$duration](bold yellow)"

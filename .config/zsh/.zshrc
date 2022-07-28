@@ -11,7 +11,7 @@
 #
 # MIT License
 
-# Oh My Zsh ======================================
+# Oh My Zsh ==========================================================
 export ZSH="$XDG_CONFIG_HOME/ohmyzsh"
 ZSH_THEME="robbyrussell"
 
@@ -32,7 +32,7 @@ plugins=(
 autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 
-# Other configuration ============================
+# Other configuration ================================================
 
 # Custom command not found handler
 command_not_found_handler () {
