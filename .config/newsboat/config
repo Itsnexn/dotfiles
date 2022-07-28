@@ -19,6 +19,8 @@ external-url-viewer "urlscan -d --no-browser | rofi -dmenu -theme menu -mesg 'Se
 # refresh-on-startup yes
 # Feed settings
 # prepopulate-query-feeds yes
+scrolloff 10
+wrap-scroll yes
 
 # Keybindings ========================================================
 
