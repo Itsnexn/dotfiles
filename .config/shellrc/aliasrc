@@ -22,6 +22,7 @@ alias t="tldr"
 alias tb="nc termbin.com 9999"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias yarn="yarn --use-yarnrc $HOME/.yarn/yarnrc"
+alias feh="feh --action1 'xclip -selection clipboard -t image/png -i %F'"
 
 # Changing "ls" to "exa"
 if [ -n "$(command -v exa)" ]; then
